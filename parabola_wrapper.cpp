@@ -13,7 +13,7 @@
 #include <chrono>
 #include <cmath>
 #include "swephexp.h"
-
+#include "parabola_wrapper.h"
 size_t g_parabola_thread_count = 8; // default, gets tuned at runtime
 
 struct PlanetRequest {
@@ -98,7 +98,7 @@ std::vector<PlanetResult> compute_planets_threadpool(const std::vector<PlanetReq
     return results;
 }
 
-int main() {
+int swephmain() {
     swe_set_ephe_path("./ephe");
 
     const double base_jd = 2451545.0; // Jan 1, 2000

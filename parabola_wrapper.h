@@ -1,17 +1,18 @@
 // parabola_parallelizer.h
 // A universal, type-agnostic thread pool executor for Swiss Ephemeris calls
 #pragma once
+ #include <cstddef>
+extern size_t g_parabola_thread_count;
 
 #include <vector>
 #include <future>
 #include <thread>
 #include <queue>
 #include <mutex>
-#include <condition_variable>S
+#include <condition_variable>
 #include <functional>
 #include "swephexp.h"
-extern size_t g_parabola_thread_count;
-
+#include "threadcount.h"
 class ParabolaThreadPool {
 public:
     ParabolaThreadPool(size_t threads) {
