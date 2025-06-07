@@ -1,42 +1,20 @@
-# this Makefile creates a SwissEph library and a swetest sample on 64-bit
-# Redhat Enterprise Linux RHEL 7.
+CFLAGS =  -g -Wall -fPIC
+OP=$(CFLAGS)
+CC=cc
+CXX=g++
 
-# The mode marked as 'Linux' should also work with the GNU C compiler
-# gcc on other systems. 
+SWEOBJ = swedate.o swehouse.o swejpl.o swemmoon.o swemplan.o sweph.o \
+         swephlib.o swecl.o swehel.o
 
-# If you modify this makefile for another compiler, please
-# let us know. We would like to add as many variations as possible.
-# If you get warnings and error messages from your compiler, please
-# let us know. We like to fix the source code so that it compiles
-# free of warnings.
-# send email to the Swiss Ephemeris mailing list.
-# 
+all: swetest swetests swevents swemini parabola_wrapper parabola_benchmark
 
-CFLAGS =  -g -Wall -fPIC # for Linux and other gcc systems
-#CFLAGS =  -O2 -Wall -fPIC # for Linux and other gcc systems
-OP=$(CFLAGS)  
-CC=cc	#for Linux
+# --- Swiss Ephemeris tools ---
 
-# compilation rule for general cases
-.o :
-	$(CC) $(OP) -o $@ $? -lm
-.c.o:
-	$(CC) -c $(OP) $<     
-
-SWEOBJ = swedate.o swehouse.o swejpl.o swemmoon.o swemplan.o sweph.o\
-	 swephlib.o swecl.o swehel.o
-
-all:	swetest swetests swevents swemini
-
-# build swetest with SE linked in, using dynamically linked system libraries libc, libm, libdl.
 swetest: swetest.o libswe.a
 	$(CC) $(OP) -o swetest swetest.o -L. -lswe -lm -ldl
 
-# build a statically linked version of swetest. first find out where libc.a and libm.a reside,
-# and add this path with -L like below
-# a statically linked program will run on any Linux variant, independent of dynamic system libraries.
 swetests: swetest.o $(SWEOBJ)
-	$(CC)  $(OP) -static -L/usr/lib/x86_64-redhat-linux6E/lib64/ -o swetests swetest.o $(SWEOBJ) -lm -ldl
+	$(CC) $(OP) -static -L/usr/lib/x86_64-redhat-linux6E/lib64/ -o swetests swetest.o $(SWEOBJ) -lm -ldl
 
 swevents: swevents.o $(SWEOBJ)
 	$(CC) $(OP) -o swevents swevents.o $(SWEOBJ) -lm -ldl
@@ -44,26 +22,32 @@ swevents: swevents.o $(SWEOBJ)
 swemini: swemini.o libswe.a
 	$(CC) $(OP) -o swemini swemini.o -L. -lswe -lm -ldl
 
-# create an archive and a dynamic link libary fro SwissEph
-# a user of this library will inlcude swephexp.h  and link with -lswe
-
 libswe.a: $(SWEOBJ)
-	ar r libswe.a	$(SWEOBJ)
+	ar rcs libswe.a $(SWEOBJ)
 
 libswe.so: $(SWEOBJ)
 	$(CC) -shared -o libswe.so $(SWEOBJ)
 
-test:
-	cd setest && make && ./setest t
+# --- Parabola wrappers ---
 
-test.exp:
-	cd setest && make && ./setest -g t
+parabola_wrapper: parabola_wrapper.cpp libswe.a
+	$(CXX) -std=c++17 -pthread -o parabola_wrapper parabola_wrapper.cpp -L. -lswe -lm -ldl
+
+parabola_benchmark: parabola_wrapper.cpp libswe.a
+	$(CXX) -std=c++17 -pthread -o parabola_benchmark parabola_wrapper.cpp -L. -lswe -lm -ldl
+
+# --- Optional: Auto-run benchmark at install time ---
+
+install: parabola_benchmark
+	@echo "[✓] Running parabola RTM benchmark..."
+	./parabola_benchmark
 
 clean:
-	rm -f *.o swetest libswe*
+	rm -f *.o swetest libswe* parabola_wrapper parabola_benchmark
 	cd setest && make clean
-	
-###
+
+# --- Dependency headers ---
+
 swecl.o: swejpl.h sweodef.h swephexp.h swedll.h sweph.h swephlib.h
 sweclips.o: sweodef.h swephexp.h swedll.h
 swedate.o: swephexp.h sweodef.h swedll.h
