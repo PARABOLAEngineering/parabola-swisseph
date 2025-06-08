@@ -13,27 +13,11 @@
 #include <cstring>
 #include <iostream>
 
+// Public API types for use in the rest of Parabola
+PlanetBatchResult compute_batch(const PlanetBatchRequest& batch);
+
+
 size_t g_parabola_thread_count = 1; // default fallback if no autotune is run
-
-struct PlanetRequest {
-    double jd;
-    int ipl;
-};
-
-struct PlanetResult {
-    int ipl;
-    double xx[6];
-    int errcode;
-    char serr[256];
-};
-
-struct PlanetBatchRequest {
-    std::vector<PlanetRequest> requests;
-};
-
-struct PlanetBatchResult {
-    std::vector<PlanetResult> results;
-};
 
 class ThreadPool {
 public:

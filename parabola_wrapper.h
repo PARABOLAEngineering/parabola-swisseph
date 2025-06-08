@@ -77,3 +77,32 @@ std::vector<R> parabola(const std::vector<T>& items, std::function<R(const T&)> 
         results.push_back(f.get());
     return results;
 }
+#pragma once
+#include <vector>
+
+// Public API types
+struct PlanetRequest {
+    double jd;
+    int ipl;
+};
+
+struct PlanetResult {
+    int ipl;
+    double xx[6];
+    int errcode;
+    char serr[256];
+};
+
+struct PlanetBatchRequest {
+    std::vector<PlanetRequest> requests;
+};
+
+struct PlanetBatchResult {
+    std::vector<PlanetResult> results;
+};
+
+// Main API entrypoint
+PlanetBatchResult compute_batch(const PlanetBatchRequest& batch);
+
+// Configurable thread pool tuning
+extern size_t g_parabola_thread_count;

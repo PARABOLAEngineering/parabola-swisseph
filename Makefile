@@ -6,7 +6,7 @@ CXX=g++
 SWEOBJ = swedate.o swehouse.o swejpl.o swemmoon.o swemplan.o sweph.o \
          swephlib.o swecl.o swehel.o
 
-all: swetest swetests swevents swemini parabola_wrapper parabola_benchmark
+all: swetest swetests swevents swemini libparabola.a
 
 # --- Swiss Ephemeris tools ---
 
@@ -30,20 +30,13 @@ libswe.so: $(SWEOBJ)
 
 # --- Parabola wrappers ---
 
-# Compile the wrapper into an object file
-parabola_wrapper.o: parabola_wrapper.cpp
+# Parabola high-speed wrapper build
+parabola_wrapper.o: parabola_wrapper.cpp parabola_wrapper.h
 	$(CXX) -std=c++17 -pthread -c parabola_wrapper.cpp -o parabola_wrapper.o
 
-# Build static library from the object file
 libparabola.a: parabola_wrapper.o
 	ar rcs libparabola.a parabola_wrapper.o
 
-# Link main console using both Swiss Ephemeris and Parabola
-parabola_console: main.cpp libparabola.a libswe.a
-	$(CXX) -std=c++17 -pthread -o parabola_console main.cpp -L. -lparabola -lswe -lm -ldl
-
-clean:
-	cd setest && make clean
 
 # --- Dependency headers ---
 
