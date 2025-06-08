@@ -30,20 +30,19 @@ libswe.so: $(SWEOBJ)
 
 # --- Parabola wrappers ---
 
-parabola_wrapper: parabola_wrapper.cpp libswe.a
-	$(CXX) -std=c++17 -pthread -o parabola_wrapper parabola_wrapper.cpp -L. -lswe -lm -ldl
+# Compile the wrapper into an object file
+parabola_wrapper.o: parabola_wrapper.cpp
+	$(CXX) -std=c++17 -pthread -c parabola_wrapper.cpp -o parabola_wrapper.o
 
-parabola_benchmark: parabola_wrapper.cpp libswe.a
-	$(CXX) -std=c++17 -pthread -o parabola_benchmark parabola_wrapper.cpp -L. -lswe -lm -ldl
+# Build static library from the object file
+libparabola.a: parabola_wrapper.o
+	ar rcs libparabola.a parabola_wrapper.o
 
-# --- Optional: Auto-run benchmark at install time ---
-
-install: parabola_benchmark
-	@echo "[✓] Running parabola RTM benchmark..."
-	./parabola_benchmark
+# Link main console using both Swiss Ephemeris and Parabola
+parabola_console: main.cpp libparabola.a libswe.a
+	$(CXX) -std=c++17 -pthread -o parabola_console main.cpp -L. -lparabola -lswe -lm -ldl
 
 clean:
-	rm -f *.o swetest libswe* parabola_wrapper parabola_benchmark
 	cd setest && make clean
 
 # --- Dependency headers ---

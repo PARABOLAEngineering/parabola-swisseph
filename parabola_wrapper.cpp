@@ -1,20 +1,19 @@
-// swisseph_parallel_patch.cpp
-// A standalone patch that wraps Swiss Ephemeris with parallelized batch calls using a thread pool
-// Compiles with: g++ -std=c++17 -pthread -lswe -o swisseph_parallel_patch swisseph_parallel_patch.cpp
-// On first run, it benchmarks and sets the global thread count for the wrapper
+// parabola_wrapper.cpp
+// Thread-safe, batch-optimized Swiss Ephemeris parallel executor
 
-#include <iostream>
+#include "parabola_wrapper.h"
+#include "swephexp.h"
 #include <vector>
-#include <queue>
-#include <thread>
+#include <string>
 #include <future>
 #include <mutex>
+#include <thread>
+#include <queue>
 #include <condition_variable>
-#include <chrono>
-#include <cmath>
-#include "swephexp.h"
-#include "parabola_wrapper.h"
-size_t g_parabola_thread_count = 8; // default, gets tuned at runtime
+#include <cstring>
+#include <iostream>
+
+size_t g_parabola_thread_count = 1; // default fallback if no autotune is run
 
 struct PlanetRequest {
     double jd;
@@ -25,6 +24,15 @@ struct PlanetResult {
     int ipl;
     double xx[6];
     int errcode;
+    char serr[256];
+};
+
+struct PlanetBatchRequest {
+    std::vector<PlanetRequest> requests;
+};
+
+struct PlanetBatchResult {
+    std::vector<PlanetResult> results;
 };
 
 class ThreadPool {
@@ -48,8 +56,8 @@ public:
     }
 
     template<class F>
-    auto enqueue(F&& f) -> std::future<typename std::result_of<F()>::type> {
-        using return_type = typename std::result_of<F()>::type;
+    auto enqueue(F&& f) -> std::future<typename std::invoke_result_t<F>> {
+        using return_type = typename std::invoke_result_t<F>;
         auto task = std::make_shared<std::packaged_task<return_type()>>(std::forward<F>(f));
         std::future<return_type> res = task->get_future();
         {
@@ -78,62 +86,81 @@ private:
     bool stop = false;
 };
 
-std::vector<PlanetResult> compute_planets_threadpool(const std::vector<PlanetRequest>& requests, size_t num_threads) {
-    ThreadPool pool(num_threads);
-    std::vector<std::future<PlanetResult>> futures;
+size_t autotune_threads(const std::vector<PlanetRequest>& requests) {
+    size_t best = 1;
+    double best_throughput = 0;
+    size_t trial = 1;
+    std::vector<PlanetRequest> slice = requests;
 
-    for (const auto& req : requests) {
-        futures.emplace_back(pool.enqueue([=]() {
-            PlanetResult result = {.ipl = req.ipl};
-            char serr[256] = {0};
-            swe_calc_ut(req.jd, req.ipl, SEFLG_SPEED, result.xx, serr);
-            result.errcode = (serr[0] != '\0');
+    while (true) {
+        try {
+            auto start = std::chrono::high_resolution_clock::now();
+            ThreadPool pool(trial);
+            std::vector<std::future<void>> futures;
+
+            size_t slice_size = std::max<size_t>(1, slice.size() / trial);
+            for (size_t i = 0; i < slice.size(); i += slice_size) {
+                size_t end = std::min(slice.size(), i + slice_size);
+                futures.push_back(pool.enqueue([batch = std::vector<PlanetRequest>(slice.begin() + i, slice.begin() + end)]() {
+                    for (const auto& req : batch) {
+                        double xx[6];
+                        char serr[256] = {0};
+                        swe_calc_ut(req.jd, req.ipl, SEFLG_SPEED, xx, serr);
+                    }
+                }));
+            }
+
+            for (auto& f : futures) f.get();
+            auto end = std::chrono::high_resolution_clock::now();
+            auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+            double throughput = (requests.size() / (double)ms) * 1000.0;
+
+            std::cout << trial << " threads: " << ms << " ms => " << throughput << " planets/sec\n";
+
+            if (throughput > best_throughput) {
+                best_throughput = throughput;
+                best = trial;
+                ++trial;
+            } else {
+                break; // performance dropped, stop here
+            }
+        } catch (...) {
+            break; // thread creation failed, cap reached
+        }
+    }
+    return best;
+}
+
+PlanetBatchResult compute_batch(const PlanetBatchRequest& batch) {
+    g_parabola_thread_count = autotune_threads(batch.requests);
+    ThreadPool pool(g_parabola_thread_count);
+    std::vector<std::future<PlanetBatchResult>> futures;
+
+    size_t slice_size = std::max<size_t>(1, batch.requests.size() / g_parabola_thread_count);
+
+    for (size_t i = 0; i < batch.requests.size(); i += slice_size) {
+        size_t end = std::min(batch.requests.size(), i + slice_size);
+        std::vector<PlanetRequest> slice(batch.requests.begin() + i, batch.requests.begin() + end);
+
+        futures.emplace_back(pool.enqueue([slice]() -> PlanetBatchResult {
+            PlanetBatchResult result;
+            for (const auto& req : slice) {
+                PlanetResult r = {.ipl = req.ipl};
+                std::memset(r.serr, 0, sizeof(r.serr));
+                int ret = swe_calc_ut(req.jd, req.ipl, SEFLG_SPEED, r.xx, r.serr);
+                r.errcode = ret;
+                result.results.push_back(r);
+            }
             return result;
         }));
     }
 
-    std::vector<PlanetResult> results;
-    results.reserve(futures.size());
-    for (auto& fut : futures) results.push_back(fut.get());
-    return results;
-}
-
-int swephmain() {
-    swe_set_ephe_path("./ephe");
-
-    const double base_jd = 2451545.0; // Jan 1, 2000
-    const int planets[] = {SE_SUN, SE_MOON, SE_MERCURY, SE_VENUS, SE_MARS,
-                           SE_JUPITER, SE_SATURN, SE_URANUS, SE_NEPTUNE, SE_PLUTO};
-
-    const int charts = 1000;
-    std::vector<PlanetRequest> batch;
-    for (int i = 0; i < charts; ++i) {
-        double jd = base_jd + (i * (1.0 / 1440.0));
-        for (int pid : planets) {
-            batch.push_back({jd, pid});
-        }
+    PlanetBatchResult merged;
+    for (auto& fut : futures) {
+        PlanetBatchResult r = fut.get();
+        merged.results.insert(merged.results.end(), r.results.begin(), r.results.end());
     }
 
-    const std::vector<size_t> thread_counts = {1, 2, 4, 8, 16};
-    size_t best_threads = 1;
-    double best_throughput = 0;
-
-    std::cout << "\n== Autotuning optimal thread count ==\n";
-    for (size_t threads : thread_counts) {
-        auto start = std::chrono::high_resolution_clock::now();
-        auto results = compute_planets_threadpool(batch, threads);
-        auto end = std::chrono::high_resolution_clock::now();
-        auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-        double throughput = (results.size() / (double)ms) * 1000.0;
-        std::cout << threads << " threads: " << ms << " ms => " << throughput << " planets/sec\n";
-        if (throughput > best_throughput) {
-            best_throughput = throughput;
-            best_threads = threads;
-        }
-    }
-
-    g_parabola_thread_count = best_threads;
-    std::cout << "\n[✓] Optimal thread count: " << g_parabola_thread_count << "\n";
-
-    return 0;
+    swe_close();
+    return merged;
 }
