@@ -80,6 +80,8 @@ std::vector<R> parabola(const std::vector<T>& items, std::function<R(const T&)> 
 #pragma once
 #include <vector>
 
+void initialize(const std::string& ephemeris_path, size_t thread_count = 0);
+
 // Public API types
 struct PlanetRequest {
     double jd;
