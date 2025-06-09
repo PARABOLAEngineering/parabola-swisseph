@@ -15,6 +15,7 @@
 #include <atomic>
 #include <memory>
 #include <algorithm>
+#include <fstream>
 
 // Logging levels
 enum class LogLevel { DEBUG, INFO, WARN, ERROR };
@@ -24,6 +25,7 @@ static std::once_flag init_flag;
 static std::atomic<bool> is_initialized{false};
 static std::string ephe_path;
 static std::mutex logger_mutex;
+static std::mutex config_mutex;
 
 // Thread-safe logging
 void log_message(LogLevel level, const std::string& message) {
@@ -303,12 +305,38 @@ PlanetBatchResult compute_batch(const PlanetBatchRequest& batch) {
 }
 
 // Initialization API
+// Just initialization - no tuning
+// Updated initialization API
 void initialize(const std::string& ephemeris_path, size_t thread_count) {
     initialize_swiss_ephemeris(ephemeris_path);
     
+    // Basic validation
     if (thread_count == 0) {
-        thread_count = autotune_threads();
+        thread_count = std::thread::hardware_concurrency();
+        log_message(LogLevel::INFO, 
+            "Using hardware concurrency: " + std::to_string(thread_count));
     }
     
     ThreadPool::instance().resize(thread_count);
-} 
+}
+
+// Standalone tuning executable
+int main(int argc, char** argv) {
+    if (argc > 1 && std::string(argv[1]) == "--tune") {
+        std::string ephe_path = "./ephe";
+        std::string config_path;
+        
+        // Parse args (use proper arg parsing in real code)
+        if (argc > 2) ephe_path = argv[2];
+        if (argc > 3) config_path = argv[3];
+        
+        try {
+                    initialize_swiss_ephemeris(ephe_path);
+                    size_t threads = autotune_threads();
+                    std::cout << "Optimal thread count: " << threads << std::endl;
+                    return 0;
+                } catch (...) {
+                    return 1;
+                }
+            }
+        }

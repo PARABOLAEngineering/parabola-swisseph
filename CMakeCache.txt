@@ -231,6 +231,9 @@ Project_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/reed/reeddev/parabola_cpp/swisseph
 
+//Dependencies for the target
+parabola_wrapper_LIB_DEPENDS:STATIC=general;swe;
+
 
 ########################
 # INTERNAL cache entries
