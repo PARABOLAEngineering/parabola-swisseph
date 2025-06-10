@@ -152,7 +152,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=parabola-swisseph
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -231,8 +231,14 @@ Project_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/reed/reeddev/parabola_cpp/swisseph
 
-//Dependencies for the target
-parabola_wrapper_LIB_DEPENDS:STATIC=general;swe;
+//Value Computed by CMake
+parabola-swisseph_BINARY_DIR:STATIC=/home/reed/reeddev/parabola_cpp/swisseph
+
+//Value Computed by CMake
+parabola-swisseph_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+parabola-swisseph_SOURCE_DIR:STATIC=/home/reed/reeddev/parabola_cpp/swisseph
 
 
 ########################

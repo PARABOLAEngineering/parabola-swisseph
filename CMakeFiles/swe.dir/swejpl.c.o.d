@@ -1,4 +1,4 @@
-swisseph/CMakeFiles/swe.dir/swejpl.c.o: \
+CMakeFiles/swe.dir/swejpl.c.o: \
  /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c \
  /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

@@ -1,4 +1,4 @@
-swisseph/CMakeFiles/swe.dir/swehouse.c.o: \
+CMakeFiles/swe.dir/swehouse.c.o: \
  /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c \
  /usr/include/stdc-predef.h \
  /home/reed/reeddev/parabola_cpp/swisseph/swephexp.h \

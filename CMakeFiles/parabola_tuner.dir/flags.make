@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/reed/reeddev/parabola_cpp/swisseph
+CXX_INCLUDES = -I/home/reed/reeddev/parabola_cpp/swisseph/parabola_swephexp.h -I/home/reed/reeddev/parabola_cpp/swisseph
 
 CXX_FLAGS = 
 

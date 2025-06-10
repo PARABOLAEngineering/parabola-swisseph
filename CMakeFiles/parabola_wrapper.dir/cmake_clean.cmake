@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o"
-  "CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o.d"
+  "CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o"
+  "CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o.d"
   "libparabola_wrapper.a"
   "libparabola_wrapper.pdb"
 )

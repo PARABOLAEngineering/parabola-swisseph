@@ -69,156 +69,156 @@ include CMakeFiles/swe.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/swe.dir/flags.make
 
-CMakeFiles/swe.dir/swedate.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swedate.o: swedate.c
-CMakeFiles/swe.dir/swedate.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/swe.dir/swedate.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swedate.o -MF CMakeFiles/swe.dir/swedate.o.d -o CMakeFiles/swe.dir/swedate.o -c /home/reed/reeddev/parabola_cpp/swisseph/swedate.c
+CMakeFiles/swe.dir/swedate.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swedate.c.o: swedate.c
+CMakeFiles/swe.dir/swedate.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/swe.dir/swedate.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swedate.c.o -MF CMakeFiles/swe.dir/swedate.c.o.d -o CMakeFiles/swe.dir/swedate.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swedate.c
 
-CMakeFiles/swe.dir/swedate.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swedate.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swedate.c > CMakeFiles/swe.dir/swedate.i
+CMakeFiles/swe.dir/swedate.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swedate.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swedate.c > CMakeFiles/swe.dir/swedate.c.i
 
-CMakeFiles/swe.dir/swedate.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swedate.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swedate.c -o CMakeFiles/swe.dir/swedate.s
+CMakeFiles/swe.dir/swedate.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swedate.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swedate.c -o CMakeFiles/swe.dir/swedate.c.s
 
-CMakeFiles/swe.dir/swehouse.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swehouse.o: swehouse.c
-CMakeFiles/swe.dir/swehouse.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/swe.dir/swehouse.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swehouse.o -MF CMakeFiles/swe.dir/swehouse.o.d -o CMakeFiles/swe.dir/swehouse.o -c /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c
+CMakeFiles/swe.dir/swehouse.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swehouse.c.o: swehouse.c
+CMakeFiles/swe.dir/swehouse.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/swe.dir/swehouse.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swehouse.c.o -MF CMakeFiles/swe.dir/swehouse.c.o.d -o CMakeFiles/swe.dir/swehouse.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c
 
-CMakeFiles/swe.dir/swehouse.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swehouse.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c > CMakeFiles/swe.dir/swehouse.i
+CMakeFiles/swe.dir/swehouse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swehouse.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c > CMakeFiles/swe.dir/swehouse.c.i
 
-CMakeFiles/swe.dir/swehouse.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swehouse.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c -o CMakeFiles/swe.dir/swehouse.s
+CMakeFiles/swe.dir/swehouse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swehouse.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swehouse.c -o CMakeFiles/swe.dir/swehouse.c.s
 
-CMakeFiles/swe.dir/swejpl.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swejpl.o: swejpl.c
-CMakeFiles/swe.dir/swejpl.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/swe.dir/swejpl.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swejpl.o -MF CMakeFiles/swe.dir/swejpl.o.d -o CMakeFiles/swe.dir/swejpl.o -c /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c
+CMakeFiles/swe.dir/swejpl.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swejpl.c.o: swejpl.c
+CMakeFiles/swe.dir/swejpl.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/swe.dir/swejpl.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swejpl.c.o -MF CMakeFiles/swe.dir/swejpl.c.o.d -o CMakeFiles/swe.dir/swejpl.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c
 
-CMakeFiles/swe.dir/swejpl.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swejpl.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c > CMakeFiles/swe.dir/swejpl.i
+CMakeFiles/swe.dir/swejpl.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swejpl.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c > CMakeFiles/swe.dir/swejpl.c.i
 
-CMakeFiles/swe.dir/swejpl.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swejpl.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c -o CMakeFiles/swe.dir/swejpl.s
+CMakeFiles/swe.dir/swejpl.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swejpl.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swejpl.c -o CMakeFiles/swe.dir/swejpl.c.s
 
-CMakeFiles/swe.dir/swemmoon.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swemmoon.o: swemmoon.c
-CMakeFiles/swe.dir/swemmoon.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/swe.dir/swemmoon.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swemmoon.o -MF CMakeFiles/swe.dir/swemmoon.o.d -o CMakeFiles/swe.dir/swemmoon.o -c /home/reed/reeddev/parabola_cpp/swisseph/swemmoon.c
+CMakeFiles/swe.dir/swemmoon.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swemmoon.c.o: swemmoon.c
+CMakeFiles/swe.dir/swemmoon.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/swe.dir/swemmoon.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swemmoon.c.o -MF CMakeFiles/swe.dir/swemmoon.c.o.d -o CMakeFiles/swe.dir/swemmoon.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swemmoon.c
 
-CMakeFiles/swe.dir/swemmoon.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swemmoon.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swemmoon.c > CMakeFiles/swe.dir/swemmoon.i
+CMakeFiles/swe.dir/swemmoon.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swemmoon.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swemmoon.c > CMakeFiles/swe.dir/swemmoon.c.i
 
-CMakeFiles/swe.dir/swemmoon.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swemmoon.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swemmoon.c -o CMakeFiles/swe.dir/swemmoon.s
+CMakeFiles/swe.dir/swemmoon.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swemmoon.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swemmoon.c -o CMakeFiles/swe.dir/swemmoon.c.s
 
-CMakeFiles/swe.dir/swemplan.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swemplan.o: swemplan.c
-CMakeFiles/swe.dir/swemplan.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/swe.dir/swemplan.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swemplan.o -MF CMakeFiles/swe.dir/swemplan.o.d -o CMakeFiles/swe.dir/swemplan.o -c /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c
+CMakeFiles/swe.dir/swemplan.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swemplan.c.o: swemplan.c
+CMakeFiles/swe.dir/swemplan.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/swe.dir/swemplan.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swemplan.c.o -MF CMakeFiles/swe.dir/swemplan.c.o.d -o CMakeFiles/swe.dir/swemplan.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c
 
-CMakeFiles/swe.dir/swemplan.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swemplan.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c > CMakeFiles/swe.dir/swemplan.i
+CMakeFiles/swe.dir/swemplan.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swemplan.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c > CMakeFiles/swe.dir/swemplan.c.i
 
-CMakeFiles/swe.dir/swemplan.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swemplan.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c -o CMakeFiles/swe.dir/swemplan.s
+CMakeFiles/swe.dir/swemplan.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swemplan.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c -o CMakeFiles/swe.dir/swemplan.c.s
 
-CMakeFiles/swe.dir/sweph.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/sweph.o: sweph.c
-CMakeFiles/swe.dir/sweph.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/swe.dir/sweph.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/sweph.o -MF CMakeFiles/swe.dir/sweph.o.d -o CMakeFiles/swe.dir/sweph.o -c /home/reed/reeddev/parabola_cpp/swisseph/sweph.c
+CMakeFiles/swe.dir/sweph.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/sweph.c.o: sweph.c
+CMakeFiles/swe.dir/sweph.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/swe.dir/sweph.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/sweph.c.o -MF CMakeFiles/swe.dir/sweph.c.o.d -o CMakeFiles/swe.dir/sweph.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/sweph.c
 
-CMakeFiles/swe.dir/sweph.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/sweph.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/sweph.c > CMakeFiles/swe.dir/sweph.i
+CMakeFiles/swe.dir/sweph.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/sweph.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/sweph.c > CMakeFiles/swe.dir/sweph.c.i
 
-CMakeFiles/swe.dir/sweph.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/sweph.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/sweph.c -o CMakeFiles/swe.dir/sweph.s
+CMakeFiles/swe.dir/sweph.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/sweph.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/sweph.c -o CMakeFiles/swe.dir/sweph.c.s
 
-CMakeFiles/swe.dir/swephlib.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swephlib.o: swephlib.c
-CMakeFiles/swe.dir/swephlib.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/swe.dir/swephlib.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swephlib.o -MF CMakeFiles/swe.dir/swephlib.o.d -o CMakeFiles/swe.dir/swephlib.o -c /home/reed/reeddev/parabola_cpp/swisseph/swephlib.c
+CMakeFiles/swe.dir/swephlib.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swephlib.c.o: swephlib.c
+CMakeFiles/swe.dir/swephlib.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/swe.dir/swephlib.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swephlib.c.o -MF CMakeFiles/swe.dir/swephlib.c.o.d -o CMakeFiles/swe.dir/swephlib.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swephlib.c
 
-CMakeFiles/swe.dir/swephlib.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swephlib.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swephlib.c > CMakeFiles/swe.dir/swephlib.i
+CMakeFiles/swe.dir/swephlib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swephlib.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swephlib.c > CMakeFiles/swe.dir/swephlib.c.i
 
-CMakeFiles/swe.dir/swephlib.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swephlib.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swephlib.c -o CMakeFiles/swe.dir/swephlib.s
+CMakeFiles/swe.dir/swephlib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swephlib.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swephlib.c -o CMakeFiles/swe.dir/swephlib.c.s
 
-CMakeFiles/swe.dir/swecl.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swecl.o: swecl.c
-CMakeFiles/swe.dir/swecl.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/swe.dir/swecl.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swecl.o -MF CMakeFiles/swe.dir/swecl.o.d -o CMakeFiles/swe.dir/swecl.o -c /home/reed/reeddev/parabola_cpp/swisseph/swecl.c
+CMakeFiles/swe.dir/swecl.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swecl.c.o: swecl.c
+CMakeFiles/swe.dir/swecl.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/swe.dir/swecl.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swecl.c.o -MF CMakeFiles/swe.dir/swecl.c.o.d -o CMakeFiles/swe.dir/swecl.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swecl.c
 
-CMakeFiles/swe.dir/swecl.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swecl.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swecl.c > CMakeFiles/swe.dir/swecl.i
+CMakeFiles/swe.dir/swecl.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swecl.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swecl.c > CMakeFiles/swe.dir/swecl.c.i
 
-CMakeFiles/swe.dir/swecl.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swecl.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swecl.c -o CMakeFiles/swe.dir/swecl.s
+CMakeFiles/swe.dir/swecl.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swecl.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swecl.c -o CMakeFiles/swe.dir/swecl.c.s
 
-CMakeFiles/swe.dir/swehel.o: CMakeFiles/swe.dir/flags.make
-CMakeFiles/swe.dir/swehel.o: swehel.c
-CMakeFiles/swe.dir/swehel.o: CMakeFiles/swe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/swe.dir/swehel.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swehel.o -MF CMakeFiles/swe.dir/swehel.o.d -o CMakeFiles/swe.dir/swehel.o -c /home/reed/reeddev/parabola_cpp/swisseph/swehel.c
+CMakeFiles/swe.dir/swehel.c.o: CMakeFiles/swe.dir/flags.make
+CMakeFiles/swe.dir/swehel.c.o: swehel.c
+CMakeFiles/swe.dir/swehel.c.o: CMakeFiles/swe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/swe.dir/swehel.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/swe.dir/swehel.c.o -MF CMakeFiles/swe.dir/swehel.c.o.d -o CMakeFiles/swe.dir/swehel.c.o -c /home/reed/reeddev/parabola_cpp/swisseph/swehel.c
 
-CMakeFiles/swe.dir/swehel.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swehel.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swehel.c > CMakeFiles/swe.dir/swehel.i
+CMakeFiles/swe.dir/swehel.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/swe.dir/swehel.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/swehel.c > CMakeFiles/swe.dir/swehel.c.i
 
-CMakeFiles/swe.dir/swehel.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swehel.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swehel.c -o CMakeFiles/swe.dir/swehel.s
+CMakeFiles/swe.dir/swehel.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/swe.dir/swehel.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/swehel.c -o CMakeFiles/swe.dir/swehel.c.s
 
 # Object files for target swe
 swe_OBJECTS = \
-"CMakeFiles/swe.dir/swedate.o" \
-"CMakeFiles/swe.dir/swehouse.o" \
-"CMakeFiles/swe.dir/swejpl.o" \
-"CMakeFiles/swe.dir/swemmoon.o" \
-"CMakeFiles/swe.dir/swemplan.o" \
-"CMakeFiles/swe.dir/sweph.o" \
-"CMakeFiles/swe.dir/swephlib.o" \
-"CMakeFiles/swe.dir/swecl.o" \
-"CMakeFiles/swe.dir/swehel.o"
+"CMakeFiles/swe.dir/swedate.c.o" \
+"CMakeFiles/swe.dir/swehouse.c.o" \
+"CMakeFiles/swe.dir/swejpl.c.o" \
+"CMakeFiles/swe.dir/swemmoon.c.o" \
+"CMakeFiles/swe.dir/swemplan.c.o" \
+"CMakeFiles/swe.dir/sweph.c.o" \
+"CMakeFiles/swe.dir/swephlib.c.o" \
+"CMakeFiles/swe.dir/swecl.c.o" \
+"CMakeFiles/swe.dir/swehel.c.o"
 
 # External object files for target swe
 swe_EXTERNAL_OBJECTS =
 
-libswe.a: CMakeFiles/swe.dir/swedate.o
-libswe.a: CMakeFiles/swe.dir/swehouse.o
-libswe.a: CMakeFiles/swe.dir/swejpl.o
-libswe.a: CMakeFiles/swe.dir/swemmoon.o
-libswe.a: CMakeFiles/swe.dir/swemplan.o
-libswe.a: CMakeFiles/swe.dir/sweph.o
-libswe.a: CMakeFiles/swe.dir/swephlib.o
-libswe.a: CMakeFiles/swe.dir/swecl.o
-libswe.a: CMakeFiles/swe.dir/swehel.o
+libswe.a: CMakeFiles/swe.dir/swedate.c.o
+libswe.a: CMakeFiles/swe.dir/swehouse.c.o
+libswe.a: CMakeFiles/swe.dir/swejpl.c.o
+libswe.a: CMakeFiles/swe.dir/swemmoon.c.o
+libswe.a: CMakeFiles/swe.dir/swemplan.c.o
+libswe.a: CMakeFiles/swe.dir/sweph.c.o
+libswe.a: CMakeFiles/swe.dir/swephlib.c.o
+libswe.a: CMakeFiles/swe.dir/swecl.c.o
+libswe.a: CMakeFiles/swe.dir/swehel.c.o
 libswe.a: CMakeFiles/swe.dir/build.make
 libswe.a: CMakeFiles/swe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C static library libswe.a"

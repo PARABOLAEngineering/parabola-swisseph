@@ -155,158 +155,248 @@ parabola_tuner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/build
 .PHONY : parabola_tuner/fast
 
-# target to build an object file
-parabola_wrapper.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.o
+parabola_wrapper.o: parabola_wrapper.cpp.o
 .PHONY : parabola_wrapper.o
 
-# target to preprocess a source file
-parabola_wrapper.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.i
+# target to build an object file
+parabola_wrapper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.cpp.o
+.PHONY : parabola_wrapper.cpp.o
+
+parabola_wrapper.i: parabola_wrapper.cpp.i
 .PHONY : parabola_wrapper.i
 
-# target to generate assembly for a file
-parabola_wrapper.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.s
+# target to preprocess a source file
+parabola_wrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.cpp.i
+.PHONY : parabola_wrapper.cpp.i
+
+parabola_wrapper.s: parabola_wrapper.cpp.s
 .PHONY : parabola_wrapper.s
 
-# target to build an object file
-swecl.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swecl.o
+# target to generate assembly for a file
+parabola_wrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.cpp.s
+.PHONY : parabola_wrapper.cpp.s
+
+swecl.o: swecl.c.o
 .PHONY : swecl.o
 
-# target to preprocess a source file
-swecl.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swecl.i
+# target to build an object file
+swecl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swecl.c.o
+.PHONY : swecl.c.o
+
+swecl.i: swecl.c.i
 .PHONY : swecl.i
 
-# target to generate assembly for a file
-swecl.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swecl.s
+# target to preprocess a source file
+swecl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swecl.c.i
+.PHONY : swecl.c.i
+
+swecl.s: swecl.c.s
 .PHONY : swecl.s
 
-# target to build an object file
-swedate.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swedate.o
+# target to generate assembly for a file
+swecl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swecl.c.s
+.PHONY : swecl.c.s
+
+swedate.o: swedate.c.o
 .PHONY : swedate.o
 
-# target to preprocess a source file
-swedate.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swedate.i
+# target to build an object file
+swedate.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swedate.c.o
+.PHONY : swedate.c.o
+
+swedate.i: swedate.c.i
 .PHONY : swedate.i
 
-# target to generate assembly for a file
-swedate.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swedate.s
+# target to preprocess a source file
+swedate.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swedate.c.i
+.PHONY : swedate.c.i
+
+swedate.s: swedate.c.s
 .PHONY : swedate.s
 
-# target to build an object file
-swehel.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehel.o
+# target to generate assembly for a file
+swedate.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swedate.c.s
+.PHONY : swedate.c.s
+
+swehel.o: swehel.c.o
 .PHONY : swehel.o
 
-# target to preprocess a source file
-swehel.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehel.i
+# target to build an object file
+swehel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehel.c.o
+.PHONY : swehel.c.o
+
+swehel.i: swehel.c.i
 .PHONY : swehel.i
 
-# target to generate assembly for a file
-swehel.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehel.s
+# target to preprocess a source file
+swehel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehel.c.i
+.PHONY : swehel.c.i
+
+swehel.s: swehel.c.s
 .PHONY : swehel.s
 
-# target to build an object file
-swehouse.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehouse.o
+# target to generate assembly for a file
+swehel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehel.c.s
+.PHONY : swehel.c.s
+
+swehouse.o: swehouse.c.o
 .PHONY : swehouse.o
 
-# target to preprocess a source file
-swehouse.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehouse.i
+# target to build an object file
+swehouse.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehouse.c.o
+.PHONY : swehouse.c.o
+
+swehouse.i: swehouse.c.i
 .PHONY : swehouse.i
 
-# target to generate assembly for a file
-swehouse.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehouse.s
+# target to preprocess a source file
+swehouse.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehouse.c.i
+.PHONY : swehouse.c.i
+
+swehouse.s: swehouse.c.s
 .PHONY : swehouse.s
 
-# target to build an object file
-swejpl.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swejpl.o
+# target to generate assembly for a file
+swehouse.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swehouse.c.s
+.PHONY : swehouse.c.s
+
+swejpl.o: swejpl.c.o
 .PHONY : swejpl.o
 
-# target to preprocess a source file
-swejpl.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swejpl.i
+# target to build an object file
+swejpl.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swejpl.c.o
+.PHONY : swejpl.c.o
+
+swejpl.i: swejpl.c.i
 .PHONY : swejpl.i
 
-# target to generate assembly for a file
-swejpl.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swejpl.s
+# target to preprocess a source file
+swejpl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swejpl.c.i
+.PHONY : swejpl.c.i
+
+swejpl.s: swejpl.c.s
 .PHONY : swejpl.s
 
-# target to build an object file
-swemmoon.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemmoon.o
+# target to generate assembly for a file
+swejpl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swejpl.c.s
+.PHONY : swejpl.c.s
+
+swemmoon.o: swemmoon.c.o
 .PHONY : swemmoon.o
 
-# target to preprocess a source file
-swemmoon.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemmoon.i
+# target to build an object file
+swemmoon.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemmoon.c.o
+.PHONY : swemmoon.c.o
+
+swemmoon.i: swemmoon.c.i
 .PHONY : swemmoon.i
 
-# target to generate assembly for a file
-swemmoon.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemmoon.s
+# target to preprocess a source file
+swemmoon.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemmoon.c.i
+.PHONY : swemmoon.c.i
+
+swemmoon.s: swemmoon.c.s
 .PHONY : swemmoon.s
 
-# target to build an object file
-swemplan.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemplan.o
+# target to generate assembly for a file
+swemmoon.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemmoon.c.s
+.PHONY : swemmoon.c.s
+
+swemplan.o: swemplan.c.o
 .PHONY : swemplan.o
 
-# target to preprocess a source file
-swemplan.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemplan.i
+# target to build an object file
+swemplan.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemplan.c.o
+.PHONY : swemplan.c.o
+
+swemplan.i: swemplan.c.i
 .PHONY : swemplan.i
 
-# target to generate assembly for a file
-swemplan.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemplan.s
+# target to preprocess a source file
+swemplan.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemplan.c.i
+.PHONY : swemplan.c.i
+
+swemplan.s: swemplan.c.s
 .PHONY : swemplan.s
 
-# target to build an object file
-sweph.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/sweph.o
+# target to generate assembly for a file
+swemplan.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swemplan.c.s
+.PHONY : swemplan.c.s
+
+sweph.o: sweph.c.o
 .PHONY : sweph.o
 
-# target to preprocess a source file
-sweph.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/sweph.i
+# target to build an object file
+sweph.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/sweph.c.o
+.PHONY : sweph.c.o
+
+sweph.i: sweph.c.i
 .PHONY : sweph.i
 
-# target to generate assembly for a file
-sweph.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/sweph.s
+# target to preprocess a source file
+sweph.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/sweph.c.i
+.PHONY : sweph.c.i
+
+sweph.s: sweph.c.s
 .PHONY : sweph.s
 
-# target to build an object file
-swephlib.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swephlib.o
+# target to generate assembly for a file
+sweph.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/sweph.c.s
+.PHONY : sweph.c.s
+
+swephlib.o: swephlib.c.o
 .PHONY : swephlib.o
 
-# target to preprocess a source file
-swephlib.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swephlib.i
+# target to build an object file
+swephlib.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swephlib.c.o
+.PHONY : swephlib.c.o
+
+swephlib.i: swephlib.c.i
 .PHONY : swephlib.i
 
-# target to generate assembly for a file
-swephlib.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swephlib.s
+# target to preprocess a source file
+swephlib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swephlib.c.i
+.PHONY : swephlib.c.i
+
+swephlib.s: swephlib.c.s
 .PHONY : swephlib.s
+
+# target to generate assembly for a file
+swephlib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/swephlib.c.s
+.PHONY : swephlib.c.s
 
 # Help Target
 help:

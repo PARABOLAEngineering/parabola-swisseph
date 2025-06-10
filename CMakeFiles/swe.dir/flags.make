@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/reed/reeddev/parabola_cpp/swisseph
+C_INCLUDES = -I/home/reed/reeddev/parabola_cpp/swisseph/parabola_swephexp.h -I/home/reed/reeddev/parabola_cpp/swisseph
 
 C_FLAGS = 
 

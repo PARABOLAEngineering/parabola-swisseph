@@ -22,10 +22,13 @@ DECLASSIFICATION DATE: 2025-06-09 11:48PM E
 
 git clone https://github.com/parabolaengineering/parabola-swisseph.git (or if using gh CLI)
 gh repo clone parabolaengineering/parabola-swisseph
+
 ### 2. Build the Libraries and maintenance tool 'parabola_tuner'
-bash
+# Run this inside the swisseph folder, NOT your project root. #
+
 mkdir -p build && cd build
 cmake ..
+cd ..
 make
 
 ### 3. (Optional) Run the Test Suite
@@ -33,19 +36,21 @@ make
 ./ parabola_tuner --test
 
 ### 4. Usage
+You should be able to use this library as a drop-in replacement for the original Swiss Ephemeris in your projects out of the box.
+This is because swephexp.h, the main header file of the original Swiss Ephemeris, has been aliased to `parabola_swephexp.h` in this library.
+This header provides the same interface as the original Swiss Ephemeris, 
+but with added thread safety and performance optimizations.
+If it doesn't work out of the box, you can use the `sweph_alias.h` header file to alias the original Swiss Ephemeris functions to their wrapped versions manually.
 at the top of your C++ source files, instead of including swephexp.h,
-as you would when using plain Swiss Ephemeris, include the header:
-#include "parabola_swephexp.h"
-
-Alternatively, you can symlink the aliased headers in parabola_swephexp.h to be read before the original Swiss Ephemeris headers in your CMakeLists.txt using include_directories(BEFORE "${CMAKE_CURRENT_SOURCE_DIR}/parabola_swephexp.h")
- in the repository. Instead, you can symlink the aliased headers in `parabola_swephexp.h` to be read before the original Swiss Ephemeris headers in your CMakeLists.txt if you're sure you can for your specific project.
+you would include parabola_swephexp.h.
 
 ### 5. Compatibility
 parabola-swisseph should build correctly on any system the original Swiss Ephemeris can.
 This simple wrapper should work fine as the base of any software stack.
 Best practices for high-performance app design apply, so I encourage users to consider lossless communication
-via FlatBuffers or other lossless serialization formats, and to use the provided `parabola_tuner` tool 
+via FlatBuffers or other lossless serialization formats, and to use the provided `parabola_tuner` tool
 to understand how this library performs on different systems.
 
-Note: In your app build scripts, make sure to run the parabola_tuner tool as part of the install process of the app package. It creates a config file 
-that ensures maximum performance on the device on which it's installed.
+Note: In your app build scripts, make sure to run the parabola_tuner tool as part of the 
+install process of the app package. It creates a config file 
+that ensures maximum performance on the device on which it's installed. 

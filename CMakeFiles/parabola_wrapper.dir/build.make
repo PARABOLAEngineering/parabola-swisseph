@@ -69,28 +69,28 @@ include CMakeFiles/parabola_wrapper.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/parabola_wrapper.dir/flags.make
 
-CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o: CMakeFiles/parabola_wrapper.dir/flags.make
-CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o: parabola_wrapper.cpp
-CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o: CMakeFiles/parabola_wrapper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o -MF CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o.d -o CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o -c /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp
+CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o: CMakeFiles/parabola_wrapper.dir/flags.make
+CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o: parabola_wrapper.cpp
+CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o: CMakeFiles/parabola_wrapper.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o -MF CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o.d -o CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o -c /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp
 
-CMakeFiles/parabola_wrapper.dir/parabola_wrapper.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parabola_wrapper.dir/parabola_wrapper.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp > CMakeFiles/parabola_wrapper.dir/parabola_wrapper.i
+CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp > CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.i
 
-CMakeFiles/parabola_wrapper.dir/parabola_wrapper.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parabola_wrapper.dir/parabola_wrapper.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp -o CMakeFiles/parabola_wrapper.dir/parabola_wrapper.s
+CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp -o CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.s
 
 # Object files for target parabola_wrapper
 parabola_wrapper_OBJECTS = \
-"CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o"
+"CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o"
 
 # External object files for target parabola_wrapper
 parabola_wrapper_EXTERNAL_OBJECTS =
 
-libparabola_wrapper.a: CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o
+libparabola_wrapper.a: CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o
 libparabola_wrapper.a: CMakeFiles/parabola_wrapper.dir/build.make
 libparabola_wrapper.a: CMakeFiles/parabola_wrapper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libparabola_wrapper.a"

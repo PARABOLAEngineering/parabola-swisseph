@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.14)
+project(parabola-swisseph LANGUAGES C CXX)
+
 add_library(swe STATIC
   swedate.c swehouse.c swejpl.c swemmoon.c swemplan.c sweph.c
   swephlib.c swecl.c swehel.c
@@ -15,6 +18,7 @@ target_include_directories(parabola_wrapper
 target_link_libraries(parabola_wrapper
     PRIVATE swe                           # link in the Swiss Ephemeris core
 )
+include_directories(BEFORE "${CMAKE_CURRENT_SOURCE_DIR}/parabola_swephexp.h")
 
 # 2. Build your tester as an executable:
 add_executable(parabola_tuner
@@ -27,3 +31,4 @@ target_link_libraries(parabola_tuner
 # 3. (Optional) make sure they’re built by default
 add_dependencies(parabola_wrapper swe)
 add_dependencies(parabola_tuner parabola_wrapper)
+

@@ -1,4 +1,4 @@
-swisseph/CMakeFiles/swe.dir/swemplan.c.o: \
+CMakeFiles/swe.dir/swemplan.c.o: \
  /home/reed/reeddev/parabola_cpp/swisseph/swemplan.c \
  /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

@@ -1,4 +1,4 @@
-CMakeFiles/parabola_tuner.dir/parabola_wrapper.o: \
+CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o: \
  /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp \
  /usr/include/stdc-predef.h \
  /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.h \
