@@ -2,7 +2,8 @@
 DECLASSIFICATION DATE: 2025-06-09 11:48PM E
 # Parabola-swisseph: Swiss Ephemeris Threadpool Wrapper
 
-**Parabola-swisseph** is a blazing-fast, thread-safe C++ wrapper around the Swiss Ephemeris core (`libswe`) that transparently parallelizes chart computations with zero changes to your existing code. This engine enables batch astrology queries at up to **10,000 charts/sec**, supports drop-in aliasing for legacy C/C++ stacks, and exposes a clean FlatBuffer interface for cross-platform, language-agnostic consumption.
+**Parabola-swisseph** is a blazing-fast, thread-safe C++ wrapper around the Swiss Ephemeris core (`libswe`) that transparently parallelizes chart computations with zero changes to your existing code. This engine enables batch astronomy and astrology queries at up to **10,000 charts/sec**, 
+supports built-in aliasing of legacy `swe_*` functions, and provides a dynamic threadpool with autotuned performance benchmarking.
 
 ---
 
