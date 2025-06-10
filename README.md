@@ -44,11 +44,10 @@ At the top of your C++ source files, instead of #include <swephexp.h>, #include 
 
 ### 5. Compatibility
 parabola-swisseph should build correctly on any system the original Swiss Ephemeris can.
-This simple wrapper should work fine as the base of any software stack.
+This simple wrapper should work fine with any software stack.
 Best practices for high-performance app design apply, so I encourage users to consider lossless communication
-via FlatBuffers or other lossless serialization formats, and to use the provided `parabola_tuner` tool
-to understand how this library performs on different systems.
+via FlatBuffers or other lossless serialization formats, and to use the provided `parabola_tuner` tool to understand how this library performs on different systems.
 
-Note: In your app build scripts, make sure to run the parabola_tuner tool as part of the 
-install process of the app package. It creates a config file 
-that ensures maximum performance on the device on which it's installed. 
+Note: In your app build scripts, make sure to run the parabola_tuner tool as part of the install process of your app's app package (.exe, .apk, .ipa, .deb, .app etc). 
+It creates a config file that will be used by the library to optimize its performance for the specific device.
+This will ensure that the library is configured with the optimal threadpool size and other parameters to ensure maximum performance on the app's specific home device.
