@@ -45,6 +45,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/swe.dir/DependInfo.cmake"
   "CMakeFiles/parabola_wrapper.dir/DependInfo.cmake"
-  "CMakeFiles/parabola_tester.dir/DependInfo.cmake"
   "CMakeFiles/parabola_tuner.dir/DependInfo.cmake"
   )

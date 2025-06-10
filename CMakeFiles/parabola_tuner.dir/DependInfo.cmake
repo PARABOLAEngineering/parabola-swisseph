@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/reed/reeddev/parabola_cpp/swisseph/parabola_tester.cpp" "CMakeFiles/parabola_tuner.dir/parabola_tester.o" "gcc" "CMakeFiles/parabola_tuner.dir/parabola_tester.o.d"
+  "/home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp" "CMakeFiles/parabola_tuner.dir/parabola_wrapper.o" "gcc" "CMakeFiles/parabola_tuner.dir/parabola_wrapper.o.d"
   )
 
 # Targets to which this target links.

@@ -143,19 +143,6 @@ parabola_wrapper/fast:
 .PHONY : parabola_wrapper/fast
 
 #=============================================================================
-# Target rules for targets named parabola_tester
-
-# Build rule for target.
-parabola_tester: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parabola_tester
-.PHONY : parabola_tester
-
-# fast build rule for target.
-parabola_tester/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/build
-.PHONY : parabola_tester/fast
-
-#=============================================================================
 # Target rules for targets named parabola_tuner
 
 # Build rule for target.
@@ -169,36 +156,21 @@ parabola_tuner/fast:
 .PHONY : parabola_tuner/fast
 
 # target to build an object file
-parabola_tester.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/parabola_tester.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_tester.o
-.PHONY : parabola_tester.o
-
-# target to preprocess a source file
-parabola_tester.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/parabola_tester.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_tester.i
-.PHONY : parabola_tester.i
-
-# target to generate assembly for a file
-parabola_tester.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/parabola_tester.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_tester.s
-.PHONY : parabola_tester.s
-
-# target to build an object file
 parabola_wrapper.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.o
 .PHONY : parabola_wrapper.o
 
 # target to preprocess a source file
 parabola_wrapper.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.i
 .PHONY : parabola_wrapper.i
 
 # target to generate assembly for a file
 parabola_wrapper.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/parabola_wrapper.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/parabola_wrapper.s
 .PHONY : parabola_wrapper.s
 
 # target to build an object file
@@ -344,13 +316,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... parabola_tester"
 	@echo "... parabola_tuner"
 	@echo "... parabola_wrapper"
 	@echo "... swe"
-	@echo "... parabola_tester.o"
-	@echo "... parabola_tester.i"
-	@echo "... parabola_tester.s"
 	@echo "... parabola_wrapper.o"
 	@echo "... parabola_wrapper.i"
 	@echo "... parabola_wrapper.s"

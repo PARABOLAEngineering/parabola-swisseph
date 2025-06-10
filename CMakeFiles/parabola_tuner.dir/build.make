@@ -69,28 +69,28 @@ include CMakeFiles/parabola_tuner.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/parabola_tuner.dir/flags.make
 
-CMakeFiles/parabola_tuner.dir/parabola_tester.o: CMakeFiles/parabola_tuner.dir/flags.make
-CMakeFiles/parabola_tuner.dir/parabola_tester.o: parabola_tester.cpp
-CMakeFiles/parabola_tuner.dir/parabola_tester.o: CMakeFiles/parabola_tuner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parabola_tuner.dir/parabola_tester.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/parabola_tuner.dir/parabola_tester.o -MF CMakeFiles/parabola_tuner.dir/parabola_tester.o.d -o CMakeFiles/parabola_tuner.dir/parabola_tester.o -c /home/reed/reeddev/parabola_cpp/swisseph/parabola_tester.cpp
+CMakeFiles/parabola_tuner.dir/parabola_wrapper.o: CMakeFiles/parabola_tuner.dir/flags.make
+CMakeFiles/parabola_tuner.dir/parabola_wrapper.o: parabola_wrapper.cpp
+CMakeFiles/parabola_tuner.dir/parabola_wrapper.o: CMakeFiles/parabola_tuner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parabola_tuner.dir/parabola_wrapper.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/parabola_tuner.dir/parabola_wrapper.o -MF CMakeFiles/parabola_tuner.dir/parabola_wrapper.o.d -o CMakeFiles/parabola_tuner.dir/parabola_wrapper.o -c /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp
 
-CMakeFiles/parabola_tuner.dir/parabola_tester.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parabola_tuner.dir/parabola_tester.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/parabola_tester.cpp > CMakeFiles/parabola_tuner.dir/parabola_tester.i
+CMakeFiles/parabola_tuner.dir/parabola_wrapper.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parabola_tuner.dir/parabola_wrapper.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp > CMakeFiles/parabola_tuner.dir/parabola_wrapper.i
 
-CMakeFiles/parabola_tuner.dir/parabola_tester.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parabola_tuner.dir/parabola_tester.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/parabola_tester.cpp -o CMakeFiles/parabola_tuner.dir/parabola_tester.s
+CMakeFiles/parabola_tuner.dir/parabola_wrapper.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parabola_tuner.dir/parabola_wrapper.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/reed/reeddev/parabola_cpp/swisseph/parabola_wrapper.cpp -o CMakeFiles/parabola_tuner.dir/parabola_wrapper.s
 
 # Object files for target parabola_tuner
 parabola_tuner_OBJECTS = \
-"CMakeFiles/parabola_tuner.dir/parabola_tester.o"
+"CMakeFiles/parabola_tuner.dir/parabola_wrapper.o"
 
 # External object files for target parabola_tuner
 parabola_tuner_EXTERNAL_OBJECTS =
 
-parabola_tuner: CMakeFiles/parabola_tuner.dir/parabola_tester.o
+parabola_tuner: CMakeFiles/parabola_tuner.dir/parabola_wrapper.o
 parabola_tuner: CMakeFiles/parabola_tuner.dir/build.make
 parabola_tuner: libparabola_wrapper.a
 parabola_tuner: libswe.a

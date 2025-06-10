@@ -16,13 +16,14 @@ target_link_libraries(parabola_wrapper
     PRIVATE swe                           # link in the Swiss Ephemeris core
 )
 
+# 2. Build your tester as an executable:
 add_executable(parabola_tuner
-    ${CMAKE_SOURCE_DIR}/parabola_tester.cpp
+    ${CMAKE_SOURCE_DIR}/parabola_wrapper.cpp
 )
 target_link_libraries(parabola_tuner
     PRIVATE parabola_wrapper
-            swe
+        swe
 )
-#(Optional) make sure they’re built by default
+# 3. (Optional) make sure they’re built by default
 add_dependencies(parabola_wrapper swe)
 add_dependencies(parabola_tuner parabola_wrapper)

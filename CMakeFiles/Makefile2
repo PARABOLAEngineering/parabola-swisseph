@@ -65,7 +65,6 @@ CMAKE_BINARY_DIR = /home/reed/reeddev/parabola_cpp/swisseph
 # The main recursive "all" target.
 all: CMakeFiles/swe.dir/all
 all: CMakeFiles/parabola_wrapper.dir/all
-all: CMakeFiles/parabola_tester.dir/all
 all: CMakeFiles/parabola_tuner.dir/all
 .PHONY : all
 
@@ -76,7 +75,6 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/swe.dir/clean
 clean: CMakeFiles/parabola_wrapper.dir/clean
-clean: CMakeFiles/parabola_tester.dir/clean
 clean: CMakeFiles/parabola_tuner.dir/clean
 .PHONY : clean
 
@@ -87,7 +85,7 @@ clean: CMakeFiles/parabola_tuner.dir/clean
 CMakeFiles/swe.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/swe.dir/build.make CMakeFiles/swe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Built target swe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14 "Built target swe"
 .PHONY : CMakeFiles/swe.dir/all
 
 # Build rule for subdir invocation for target.
@@ -113,7 +111,7 @@ CMakeFiles/swe.dir/clean:
 CMakeFiles/parabola_wrapper.dir/all: CMakeFiles/swe.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_wrapper.dir/build.make CMakeFiles/parabola_wrapper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=5,6 "Built target parabola_wrapper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=3,4 "Built target parabola_wrapper"
 .PHONY : CMakeFiles/parabola_wrapper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -133,33 +131,6 @@ CMakeFiles/parabola_wrapper.dir/clean:
 .PHONY : CMakeFiles/parabola_wrapper.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/parabola_tester.dir
-
-# All Build rule for target.
-CMakeFiles/parabola_tester.dir/all: CMakeFiles/swe.dir/all
-CMakeFiles/parabola_tester.dir/all: CMakeFiles/parabola_wrapper.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=1,2 "Built target parabola_tester"
-.PHONY : CMakeFiles/parabola_tester.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/parabola_tester.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/parabola_tester.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles 0
-.PHONY : CMakeFiles/parabola_tester.dir/rule
-
-# Convenience name for target.
-parabola_tester: CMakeFiles/parabola_tester.dir/rule
-.PHONY : parabola_tester
-
-# clean rule for target.
-CMakeFiles/parabola_tester.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tester.dir/build.make CMakeFiles/parabola_tester.dir/clean
-.PHONY : CMakeFiles/parabola_tester.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/parabola_tuner.dir
 
 # All Build rule for target.
@@ -167,7 +138,7 @@ CMakeFiles/parabola_tuner.dir/all: CMakeFiles/swe.dir/all
 CMakeFiles/parabola_tuner.dir/all: CMakeFiles/parabola_wrapper.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parabola_tuner.dir/build.make CMakeFiles/parabola_tuner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=3,4 "Built target parabola_tuner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles --progress-num=1,2 "Built target parabola_tuner"
 .PHONY : CMakeFiles/parabola_tuner.dir/all
 
 # Build rule for subdir invocation for target.
