@@ -326,7 +326,7 @@ int main(int argc, char** argv) {
         std::string ephe_path = "./ephe";
         std::string config_path;
         
-        // Parse args (use proper arg parsing in real code)
+        // Parse args (simulation for benchmarking)
         if (argc > 2) ephe_path = argv[2];
         if (argc > 3) config_path = argv[3];
         
