@@ -53,5 +53,5 @@ mapfile -t funcs < <(
   echo ""
   echo "#endif // SWEPH_ALIAS_H"
   echo ""
-  echo "✅ Generated ${OUTPUT_HEADER} with ${#funcs[@]} commands."
+  echo "// ✅ Generated ${OUTPUT_HEADER} with ${#funcs[@]} commands."
 } >> "$OUTPUT_HEADER"
