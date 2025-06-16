@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/parabola_tester.dir/parabola_tester.o -o parabola_tester  libparabola_wrapper.a libswe.a 

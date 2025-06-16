@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/parabola_tuner.dir/parabola_wrapper.cpp.o -o parabola_tuner  libparabola_wrapper.a libswe.a 

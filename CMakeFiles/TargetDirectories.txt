@@ -1,0 +1,5 @@
+/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles/swe.dir
+/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles/parabola_wrapper.dir
+/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles/parabola_tuner.dir
+/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles/edit_cache.dir
+/home/reed/reeddev/parabola_cpp/swisseph/CMakeFiles/rebuild_cache.dir
