@@ -26,6 +26,8 @@ target_include_directories(parabola_wrapper PUBLIC
 
 target_link_libraries(parabola_wrapper PRIVATE swe)
 
+include_directories(BEFORE "${CMAKE_CURRENT_SOURCE_DIR}/headerspatch")
+
 # -----------------------
 # 3. Build the Tuner Executable
 # -----------------------
