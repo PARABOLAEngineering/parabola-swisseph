@@ -1,0 +1,2 @@
+/usr/bin/ar qc libparabola_wrapper.a CMakeFiles/parabola_wrapper.dir/parabola_wrapper.cpp.o CMakeFiles/parabola_wrapper.dir/swevid_loader.cpp.o
+/usr/bin/ranlib libparabola_wrapper.a
